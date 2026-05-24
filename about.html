@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f1e8">
+    <meta name="description" content="Personal interests and life outside of work for austin lien.">
+    <title>About | austin lien</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        var savedTheme = localStorage.getItem("portfolio-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-layout">
+        <a class="brand" href="index.html" aria-label="austin lien, home">austin lien</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="projects.html">Projects</a>
+          <a href="research.html">Research</a>
+          <a class="active" aria-current="page" href="about.html">About</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.4A9.5 9.5 0 0 1 8.6 3a9.5 9.5 0 1 0 12.4 12.4Z"/></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+        </button>
+      </div>
+    </header>
+    <main class="page-main" id="main-content">
+      <header class="page-hero">
+        <div class="container page-heading reveal">
+          <p class="eyebrow">Beyond the screen</p>
+          <h1>About</h1>
+          <p>A small corner for the things I enjoy outside of software and research.</p>
+        </div>
+      </header>
+      <section class="page-content" aria-label="Personal interests">
+        <div class="container about-sections">
+          <section class="about-block reveal" aria-labelledby="currently-title">
+            <div class="about-heading">
+              <p class="eyebrow">Right now</p>
+              <h2 id="currently-title">Currently</h2>
+            </div>
+            <div class="currently-grid" id="currently-grid"></div>
+          </section>
+
+          <section class="about-block reveal" aria-labelledby="cooking-title">
+            <div class="about-heading">
+              <p class="eyebrow">Kitchen notes</p>
+              <h2 id="cooking-title">Cooking</h2>
+            </div>
+            <div class="recipe-grid" id="recipe-grid"></div>
+          </section>
+
+          <section class="about-block reveal" aria-labelledby="fragrance-title">
+            <div class="about-heading">
+              <p class="eyebrow">Fragrance shelf</p>
+              <h2 id="fragrance-title">Scents</h2>
+            </div>
+            <div class="fragrance-grid" id="fragrance-grid"></div>
+          </section>
+
+          <section class="about-block reveal" aria-labelledby="music-title">
+            <div class="about-heading">
+              <p class="eyebrow">In rotation</p>
+              <h2 id="music-title">Music</h2>
+            </div>
+            <div class="music-grid" id="music-grid"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

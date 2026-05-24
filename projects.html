@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f1e8">
+    <meta name="description" content="Selected software engineering projects by austin lien.">
+    <title>Projects | austin lien</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        var savedTheme = localStorage.getItem("portfolio-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-layout">
+        <a class="brand" href="index.html" aria-label="austin lien, home">
+          austin lien
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="active" aria-current="page" href="projects.html">Projects</a>
+          <a href="research.html">Research</a>
+          <a href="about.html">About</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.4A9.5 9.5 0 0 1 8.6 3a9.5 9.5 0 1 0 12.4 12.4Z"/></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+        </button>
+      </div>
+    </header>
+    <main class="page-main" id="main-content">
+      <header class="page-hero">
+        <div class="container page-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h1>Projects</h1>
+          <p>Public work spanning data automation and user-focused web applications.</p>
+        </div>
+      </header>
+      <section class="page-content" aria-label="Project list">
+        <div class="container project-grid" id="project-grid"></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
