@@ -761,11 +761,20 @@ a:focus-visible,
   background: var(--surface);
 }
 
-.album-placeholder {
+.album-placeholder,
+.album-cover {
   width: 62px;
   height: 62px;
   border-radius: 7px;
+}
+
+.album-placeholder {
   background: linear-gradient(145deg, var(--accent-soft), var(--line));
+}
+
+.album-cover {
+  display: block;
+  object-fit: cover;
 }
 
 .music-card h3 {

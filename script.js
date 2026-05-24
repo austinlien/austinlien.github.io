@@ -36,7 +36,7 @@
           "An AI-powered posture guard that uses a webcam to detect slouching in real time, notify the user, and provide Gemini-generated posture advice.",
         technologies: ["Python", "MediaPipe", "Gemini", "Computer Vision"],
         href: "https://github.com/NguyenEvan/slouching-slugs",
-        image: "slouchingSlugs.png",
+        image: "slouching-slugs.png",
         imageAlt: "Slouching Slugs posture detection application interface",
         featured: true,
       },
@@ -142,18 +142,24 @@
         artist: "Jhene Aiko, Kendrick Lamar",
         note: "current rotation",
         href: "https://open.spotify.com/track/5nkUIVKqOqdpB6ApKgEMkv?si=e1a3670dfdb2424f",
+        cover:
+          "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02a0fa057b8ad3f3c4969f0c97",
       },
       {
         title: "Saturn",
         artist: "RIZ LA VIE",
         note: "a recommendation",
         href: "https://open.spotify.com/track/7lpUYOCEH6EEOSLF6r1f7r?si=fc2e0e6eb31f474e",
+        cover:
+          "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e021088f4bc2c5191ec9510d2ef",
       },
       {
         title: "OCTANE",
         artist: "Don Toliver",
         note: "album",
         href: "https://open.spotify.com/album/131x9G87mD0hP0hGZc9qYN?si=Bn7cdHNPSRCzCdY_knnrfQ",
+        cover:
+          "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0225c28f3c9fbdbab1a88dd619",
       },
     ],
     contacts: [
@@ -440,9 +446,12 @@
         var title = entry.href
           ? '<a href="' + safeHref(entry.href) + '"' + linkTarget(entry.href) + ">" + escapeHtml(entry.title) + "</a>"
           : escapeHtml(entry.title);
+        var cover = entry.cover
+          ? '<img class="album-cover" src="' + safeHref(entry.cover) + '" alt="Cover art for ' + escapeHtml(entry.title) + '" loading="lazy">'
+          : '<div class="album-placeholder" aria-hidden="true"></div>';
         return (
           '<article class="music-card">' +
-          '<div class="album-placeholder" aria-hidden="true"></div>' +
+          cover +
           "<div><h3>" +
           title +
           "</h3><p class=\"music-artist\">" +
