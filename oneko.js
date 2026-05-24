@@ -14,9 +14,27 @@
     return;
   }
 
+  function getStartingPosition() {
+    var heroName = document.getElementById("hero-name");
+
+    if (!heroName) {
+      return { x: 32, y: window.innerHeight - 48 };
+    }
+
+    var bounds = heroName.getBoundingClientRect();
+    return {
+      x: Math.max(20, bounds.left - 32),
+      y: Math.min(
+        Math.max(20, bounds.top + bounds.height / 2),
+        window.innerHeight - 20
+      ),
+    };
+  }
+
+  var startingPosition = getStartingPosition();
   var cat = document.createElement("div");
-  var catX = 32;
-  var catY = window.innerHeight - 48;
+  var catX = startingPosition.x;
+  var catY = startingPosition.y;
   var mouseX = catX;
   var mouseY = catY;
   var frameCount = 0;
