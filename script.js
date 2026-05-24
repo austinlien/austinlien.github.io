@@ -36,7 +36,7 @@
           "An AI-powered posture guard that uses a webcam to detect slouching in real time, notify the user, and provide Gemini-generated posture advice.",
         technologies: ["Python", "MediaPipe", "Gemini", "Computer Vision"],
         href: "https://github.com/NguyenEvan/slouching-slugs",
-        image: "slouching-slugs.png",
+        image: "photos/slouching-slugs.png",
         imageAlt: "Slouching Slugs posture detection application interface",
         featured: true,
       },
@@ -193,8 +193,13 @@
 
   function safeHref(value) {
     var href = String(value || "");
+    var isExternalLink = /^(https?:|mailto:)/.test(href);
+    var isSiteFile =
+      /^(?:\/|\.\/)?[a-zA-Z0-9_-]+(?:\/[a-zA-Z0-9_.-]+)*\.[a-zA-Z0-9]+(?:[?#][a-zA-Z0-9_=&%./-]*)?$/.test(
+        href
+      );
 
-    if (/^(https?:|mailto:|\/|\.{0,2}\/|[a-zA-Z0-9_-]+\/)/.test(href)) {
+    if (isExternalLink || isSiteFile) {
       return escapeHtml(href);
     }
 
