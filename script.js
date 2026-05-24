@@ -113,6 +113,38 @@
         image: "photos/okonomiyaki.webp",
       },
     ],
+    beefGallery: [
+      {
+        title: "steak no. 01",
+        note: "Add the cut, doneness, and what worked here.",
+        image: "",
+      },
+      {
+        title: "steak no. 02",
+        note: "Add a quick sear or seasoning note here.",
+        image: "",
+      },
+      {
+        title: "steak no. 03",
+        note: "Add what you would repeat or change next time.",
+        image: "",
+      },
+      {
+        title: "steak no. 04",
+        note: "Add the method and final result here.",
+        image: "",
+      },
+      {
+        title: "steak no. 05",
+        note: "Add a favorite detail from this cook here.",
+        image: "",
+      },
+      {
+        title: "steak no. 06",
+        note: "Add a short tasting note here.",
+        image: "",
+      },
+    ],
     fragrances: [
       {
         title: "Another 13",
@@ -469,6 +501,33 @@
       .join("");
   }
 
+  function renderBeefGallery() {
+    var gallery = getElement("beef-gallery");
+
+    if (!gallery) {
+      return;
+    }
+
+    gallery.innerHTML = data.beefGallery
+      .map(function (item) {
+        var media = item.image
+          ? '<img src="' + safeHref(item.image) + '" alt="' + escapeHtml(item.title) + '" loading="lazy">'
+          : '<div class="steak-placeholder" aria-hidden="true"><span>photo pending</span></div>';
+        return (
+          '<figure class="steak-card" tabindex="0">' +
+          media +
+          '<figcaption class="steak-overlay">' +
+          '<p class="steak-label">cook notes</p>' +
+          "<h2>" +
+          escapeHtml(item.title) +
+          "</h2><p>" +
+          escapeHtml(item.note) +
+          "</p></figcaption></figure>"
+        );
+      })
+      .join("");
+  }
+
   function initializeReveals() {
     var elements = document.querySelectorAll(".reveal");
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -531,5 +590,6 @@
   renderProjects();
   renderResearch();
   renderAbout();
+  renderBeefGallery();
   initializeReveals();
 })();

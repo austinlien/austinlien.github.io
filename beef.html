@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f4f1e8">
-    <meta name="description" content="Personal interests and life outside of work for austin lien.">
-    <title>About | austin lien</title>
+    <meta name="description" content="A small gallery of steaks cooked by austin lien.">
+    <title>beef | austin lien</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
     <script>
@@ -36,49 +36,18 @@
       </div>
     </header>
     <main class="page-main" id="main-content">
-      <header class="page-hero">
+      <header class="page-hero beef-hero">
         <div class="container page-heading reveal">
-          <p class="eyebrow">Beyond the screen</p>
-          <h1>About</h1>
-          <p>A small corner for the things I enjoy outside of software and research.</p>
+          <a class="back-link" href="about.html">&larr; about</a>
+          <p class="eyebrow">Kitchen archive</p>
+          <h1>beef</h1>
+          <p>Steaks I have made, plus brief notes on each cook.</p>
         </div>
       </header>
-      <section class="page-content" aria-label="Personal interests">
-        <div class="container about-sections">
-          <section class="about-block reveal" aria-labelledby="currently-title">
-            <div class="about-heading">
-              <p class="eyebrow">Right now</p>
-              <h2 id="currently-title">Currently</h2>
-            </div>
-            <div class="currently-grid" id="currently-grid"></div>
-          </section>
-
-          <section class="about-block reveal" aria-labelledby="cooking-title">
-            <div class="about-heading">
-              <p class="eyebrow">Kitchen notes</p>
-              <div class="about-title-row">
-                <h2 id="cooking-title">Cooking</h2>
-                <a class="beef-link" href="beef.html">beef <span aria-hidden="true">&rarr;</span></a>
-              </div>
-            </div>
-            <div class="recipe-grid" id="recipe-grid"></div>
-          </section>
-
-          <section class="about-block reveal" aria-labelledby="fragrance-title">
-            <div class="about-heading">
-              <p class="eyebrow">Fragrance shelf</p>
-              <h2 id="fragrance-title">Scents</h2>
-            </div>
-            <div class="fragrance-grid" id="fragrance-grid"></div>
-          </section>
-
-          <section class="about-block reveal" aria-labelledby="music-title">
-            <div class="about-heading">
-              <p class="eyebrow">In rotation</p>
-              <h2 id="music-title">Music</h2>
-            </div>
-            <div class="music-grid" id="music-grid"></div>
-          </section>
+      <section class="page-content beef-content" aria-label="Steak gallery">
+        <div class="container">
+          <p class="gallery-instruction reveal">Hover over or focus a photo for notes.</p>
+          <div class="steak-grid reveal" id="beef-gallery"></div>
         </div>
       </section>
     </main>

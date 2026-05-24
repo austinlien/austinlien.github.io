@@ -632,6 +632,38 @@ a:focus-visible,
   margin-top: 13px;
 }
 
+.about-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin-top: 13px;
+}
+
+.about-heading .about-title-row h2 {
+  margin-top: 0;
+}
+
+.beef-link {
+  color: var(--muted);
+  font-size: 0.84rem;
+  transition: color 150ms ease;
+}
+
+.beef-link:hover,
+.beef-link:focus-visible {
+  color: var(--accent-strong);
+}
+
+.beef-link span {
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 150ms ease;
+}
+
+.beef-link:hover span {
+  transform: translateX(3px);
+}
+
 .currently-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -796,6 +828,107 @@ a:focus-visible,
   margin-bottom: 0;
 }
 
+.back-link {
+  display: inline-flex;
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  transition: color 150ms ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--accent-strong);
+}
+
+.gallery-instruction {
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.steak-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.steak-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+}
+
+.steak-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.steak-card img,
+.steak-placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-content: center;
+  background:
+    linear-gradient(135deg, var(--accent-soft), var(--surface)),
+    var(--surface);
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  object-fit: cover;
+  transition:
+    filter 200ms ease,
+    transform 280ms ease;
+}
+
+.steak-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 23px 21px;
+  background: rgba(16, 21, 18, 0.72);
+  color: #f3f1e9;
+  opacity: 0;
+  transition: opacity 190ms ease;
+}
+
+.steak-label {
+  margin-bottom: 12px;
+  color: #c1d7bf;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.steak-overlay h2 {
+  margin-bottom: 11px;
+  color: #f3f1e9;
+  font-size: 1.15rem;
+}
+
+.steak-overlay > p:last-child {
+  color: #d5d9d1;
+  font-size: 0.81rem;
+}
+
+.steak-card:hover .steak-overlay,
+.steak-card:focus .steak-overlay {
+  opacity: 1;
+}
+
+.steak-card:hover img,
+.steak-card:focus img {
+  filter: brightness(0.62);
+  transform: scale(1.035);
+}
+
 .noscript-message {
   max-width: 700px;
   margin: 0 auto 32px;
@@ -856,7 +989,8 @@ a:focus-visible,
   .currently-grid,
   .recipe-grid,
   .fragrance-grid,
-  .music-grid {
+  .music-grid,
+  .steak-grid {
     grid-template-columns: 1fr;
   }
 
@@ -930,6 +1064,13 @@ a:focus-visible,
     display: none;
   }
 
+}
+
+@media (hover: none) {
+  .steak-overlay {
+    background: linear-gradient(transparent 18%, rgba(16, 21, 18, 0.82));
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
