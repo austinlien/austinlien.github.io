@@ -54,27 +54,31 @@
     ],
     research: [
       {
-        title: "SLOTHLab Research Tooling",
-        type: "Data Processing and Reporting Pipelines",
+        title: "SLOTHLab Research",
+        type: "Natural Language Processing / Responsible AI",
         description:
-          "Built Python pipelines that transformed raw TXT/CSV research inputs into structured reports, summaries, and visualizations. Used Pandas for data processing and Matplotlib for analysis graphics, helping automate repetitive research workflows and make results easier to interpret.",
+          "Supported research workflows examining language, sentiment, and potential bias in large language model outputs. Built the processing and reporting tooling needed to turn raw TXT/CSV results into structured evidence for analysis.",
+        areas: [
+          "Natural Language Processing",
+          "Sentiment Analysis",
+          "LLM Bias",
+          "Responsible AI",
+        ],
         impact:
-          "Turned unstructured research data into organized reports and visualizations that supported clearer, faster analysis.",
+          "Turned unstructured research inputs into reproducible reports and visualizations that made patterns and potential bias signals easier to inspect.",
         bullets: [
-          "Developed Python data pipelines for processing TXT and CSV research inputs.",
-          "Automated report generation to convert raw data into structured, readable summaries.",
-          "Used Pandas for cleaning, organizing, and analyzing research data.",
-          "Created Matplotlib visualizations to highlight patterns and trends.",
-          "Reduced manual data formatting and reporting work in research workflows.",
+          "Developed Python pipelines for processing TXT and CSV outputs from research workflows.",
+          "Used Pandas to clean, organize, and aggregate language-related analysis data.",
+          "Automated readable reports for comparing sentiment patterns and potential bias signals.",
+          "Created Matplotlib visualizations to support interpretation of research results.",
+          "Reduced manual processing work and supported reproducible ongoing analysis.",
         ],
         technologies: [
           "Python",
           "Pandas",
           "Matplotlib",
           "CSV/TXT Processing",
-          "Data Cleaning",
           "Automation",
-          "Research Tooling",
           "Data Visualization",
         ],
       },
@@ -613,10 +617,13 @@
           '<p class="research-description">' +
           escapeHtml(item.description) +
           "</p>" +
-          renderTags(item.technologies) +
+          '<div class="research-focus">' +
+          '<p class="research-section-label">Research areas</p>' +
+          renderTags(item.areas) +
+          "</div>" +
           "</div>" +
           '<div class="research-details">' +
-          '<p class="impact-label">Impact</p>' +
+          '<p class="impact-label">Technical contribution</p>' +
           '<p class="impact-copy">' +
           escapeHtml(item.impact) +
           "</p>" +
@@ -627,6 +634,10 @@
             })
             .join("") +
           "</ul>" +
+          '<div class="research-tools">' +
+          '<p class="research-section-label">Tools</p>' +
+          renderTags(item.technologies) +
+          "</div>" +
           "</div>" +
           "</article>"
         );

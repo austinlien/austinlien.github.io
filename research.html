@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f4f1e8">
-    <meta name="description" content="Technical research tooling and data pipeline work by austin lien.">
+    <meta name="description" content="NLP and responsible AI research support work by austin lien.">
     <title>Research | austin lien</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
@@ -12,8 +12,7 @@
       document.documentElement.classList.add("js");
       try {
         var savedTheme = localStorage.getItem("portfolio-theme");
-        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        if (savedTheme === "dark") {
           document.documentElement.dataset.theme = "dark";
         }
       } catch (error) {}
@@ -38,9 +37,9 @@
     <main class="page-main" id="main-content">
       <header class="page-hero">
         <div class="container page-heading reveal">
-          <p class="eyebrow">Research engineering</p>
+          <p class="eyebrow">NLP + responsible AI</p>
           <h1>Research</h1>
-          <p>Software tooling and data workflows built to support reproducible analysis.</p>
+          <p>Supporting analysis of language data, sentiment, and bias in large language model outputs.</p>
         </div>
       </header>
       <section class="page-content" aria-label="Research experience">

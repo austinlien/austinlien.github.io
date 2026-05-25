@@ -15,8 +15,7 @@
       document.documentElement.classList.add("js");
       try {
         var savedTheme = localStorage.getItem("portfolio-theme");
-        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        if (savedTheme === "dark") {
           document.documentElement.dataset.theme = "dark";
         }
       } catch (error) {}
