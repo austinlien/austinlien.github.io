@@ -28,8 +28,53 @@
         <a class="brand" href="index.html" aria-label="austin lien, home">
           austin lien
         </a>
-        <nav class="nav-links" aria-label="Primary">
-          <a href="projects.html">Projects</a>
+        <nav class="nav-links home-nav-links" aria-label="Primary">
+          <a
+            class="projects-promo-link"
+            href="projects.html"
+            aria-label="Projects"
+            data-goatcounter-click="home-projects-instagram-nudge"
+            data-goatcounter-title="Homepage Instagram audit prompt"
+          >
+            Projects
+            <span class="projects-nudge" aria-hidden="true">
+              <svg class="projects-nudge-arrow" viewBox="0 0 45 52">
+                <filter id="chalk-arrow-roughness">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.13" numOctaves="3" seed="8" result="noise"/>
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5"/>
+                </filter>
+                <filter id="chalk-arrow-grain">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.45" numOctaves="3" seed="19" result="dust"/>
+                  <feColorMatrix
+                    in="dust"
+                    type="matrix"
+                    values="0 0 0 0 1
+                            0 0 0 0 1
+                            0 0 0 0 1
+                            0 0 0 1.6 -0.52"
+                    result="grain"
+                  />
+                  <feComposite in="SourceGraphic" in2="grain" operator="in"/>
+                </filter>
+                <g class="chalk-underlayer" filter="url(#chalk-arrow-roughness)">
+                  <path d="M42 47 C20 45 12 30 14 8 M14 8 L6 17 M14 8 L22 14"/>
+                  <path d="M41 46 C21 45 13 29 14 9 M14 9 L7 18 M15 9 L23 15"/>
+                </g>
+                <g filter="url(#chalk-arrow-grain)">
+                  <path class="chalk-stroke" d="M42 47 C20 45 12 30 14 8 M14 8 L6 17 M14 8 L22 14"/>
+                </g>
+                <g class="chalk-scatter">
+                  <path d="M39 49 L34 48 M29 47 L26 45 M21 42 L19 40 M11 31 L11 27 M12 23 L12 19 M18 11 L21 14 M8 16 L6 19"/>
+                  <circle cx="34" cy="50" r="1.1"/>
+                  <circle cx="24" cy="44" r=".8"/>
+                  <circle cx="11" cy="35" r=".85"/>
+                  <circle cx="9" cy="22" r=".75"/>
+                  <circle cx="18" cy="8" r=".8"/>
+                </g>
+              </svg>
+              <span>curious who unfollowed<br>you on ig?</span>
+            </span>
+          </a>
           <a href="research.html">Research</a>
           <a href="about.html">About</a>
         </nav>
