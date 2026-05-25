@@ -113,36 +113,257 @@
         image: "photos/okonomiyaki.webp",
       },
     ],
+    // Newest to oldest based on the capture dates in the local source photos.
     beefGallery: [
       {
-        title: "steak no. 01",
-        note: "Add the cut, doneness, and what worked here.",
-        image: "",
+        date: "2026-05-13",
+        location: "home",
+        cut: "dry-aged new york strip",
+        notes: [
+          "trying dry-aged steak from whole foods",
+          "aged long enough to get that slight funk",
+          "quality of the beef itself wasn't the best",
+        ],
+        rating: "7.5/10",
+        image: "beefPics/dry-aged-new-york.webp",
       },
       {
-        title: "steak no. 02",
-        note: "Add a quick sear or seasoning note here.",
-        image: "",
+        date: "2026-04-26",
+        location: "home",
+        cut: "ribeye",
+        notes: [
+          "steak cook was a perfect medium rare",
+          "first time making a bordelaise sauce",
+          "ratios were slightly off",
+          "tallow-roasted potatoes",
+        ],
+        rating: "8.2/10",
+        image: "beefPics/ribeye-bordelaise.webp",
       },
       {
-        title: "steak no. 03",
-        note: "Add what you would repeat or change next time.",
-        image: "",
+        date: "2025-11-02",
+        location: "home",
+        cut: "new york strip",
+        notes: [
+          "big brunch",
+          "pretty sure i hit a bench pr after this",
+          "my stomach regretted it later though",
+        ],
+        rating: "6.8/10",
+        image: "beefPics/steak-and-eggs.webp",
       },
       {
-        title: "steak no. 04",
-        note: "Add the method and final result here.",
-        image: "",
+        date: "2025-10-02",
+        location: "home",
+        cut: "denver steak",
+        notes: [
+          "i'm pretty sure the steak had already gone kind of bad",
+          "so i got sick after this lol",
+        ],
+        rating: "3.2/10",
+        image: "beefPics/fun-size.webp",
       },
       {
-        title: "steak no. 05",
-        note: "Add a favorite detail from this cook here.",
-        image: "",
+        date: "2025-08-17",
+        location: "home",
+        cut: "ribeye",
+        notes: [
+          "stock wasn't reduced enough before finishing the sauce",
+          "too much crème fraîche",
+        ],
+        rating: "8.1/10",
+        image: "beefPics/au-poivre.webp",
       },
       {
-        title: "steak no. 06",
-        note: "Add a short tasting note here.",
-        image: "",
+        date: "2025-07-31",
+        location: "Peter Luger, Brooklyn",
+        cut: "dry-aged t-bone",
+        notes: [
+          "slightly more rare in certain areas",
+          "gets very heavy and repetitive very quickly",
+          "can't really taste the dry age",
+        ],
+        rating: "7.2/10",
+        image: "beefPics/peter-luger.webp",
+      },
+      {
+        date: "2025-07-30",
+        location: "Balthazar, New York City",
+        cut: "new york strip",
+        notes: [
+          "perfect cook",
+          "au poivre sauce was done very well",
+          "heavy, but i was still able to down the whole plate",
+        ],
+        rating: "8.5/10",
+        image: "beefPics/balthazar.webp",
+      },
+      {
+        date: "2025-07-19",
+        location: "cabin, Yosemite",
+        cut: "new york strip",
+        notes: [
+          "i did the best i could cooking six steaks in a cabin",
+          "after hiking 17 miles and cooking all three meals for everyone",
+          "sitting down and eating this made me ascend",
+        ],
+        rating: "7.2/10",
+        image: "beefPics/yosemite.webp",
+      },
+      {
+        date: "2025-05-10",
+        location: "home",
+        cut: "bone-in ribeye",
+        notes: [
+          "very good cook on such a thick steak",
+          "not to toot my own horn too much, but probably the best steak i've ever made",
+        ],
+        rating: "9.1/10",
+        image: "beefPics/bone-in-ribeye.webp",
+      },
+      {
+        date: "2025-04-24",
+        location: "home",
+        cut: "new york strip",
+        notes: [
+          "first time making this sauce",
+          "miso butter gnocchi",
+          "kind of slaps, but very heavy",
+        ],
+        rating: "8.4/10",
+        image: "beefPics/miso-gnocchi.webp",
+      },
+      {
+        date: "2025-03-18",
+        location: "home",
+        cut: "filet mignon",
+        notes: [
+          "quick, casual steak weeknight dinner",
+          "nothing to write home about",
+          "will make again",
+        ],
+        rating: "8.1/10",
+        image: "beefPics/diane.webp",
+      },
+      {
+        date: "2025-03-15",
+        location: "home",
+        cut: "filet mignon",
+        notes: [
+          "surprised i didn't explode after eating this",
+          "i trusted my freezer and costco with my life here",
+        ],
+        rating: "8.4/10",
+        image: "beefPics/tartare.webp",
+      },
+      {
+        date: "2025-03-12",
+        location: "home",
+        cut: "chateaubriand",
+        notes: [
+          "ignore the undercooking",
+          "the ends were perfectly medium rare",
+          "had to throw it back in the oven after that",
+        ],
+        rating: "center cut: 4/10 (it's raw), ends: 8.9/10",
+        image: "beefPics/wellington.webp",
+      },
+      {
+        date: "2025-03-11",
+        location: "home",
+        cut: "filet mignon",
+        notes: [
+          "so good i had to run it back",
+          "homemade gnocchi this time",
+          "plating was sloppy, but it tasted so good",
+        ],
+        rating: "8.8/10",
+        image: "beefPics/miso-gnocchi-2.webp",
+      },
+      {
+        date: "2024-08-02",
+        location: "Hawksmoor Spitalfields, London",
+        cut: "dry-aged t-bone",
+        notes: [
+          "not dry-aged for too long, so perfect for most",
+          "very hard to get a perfect cook throughout, so i can't blame them",
+          "wonderful quality though",
+        ],
+        rating: "8.8/10",
+        image: "beefPics/t-bone.webp",
+      },
+      {
+        date: "2024-08-01",
+        location: "somewhere in the ocean",
+        cut: "still don't know lol",
+        notes: [
+          "sides were slightly better",
+          "still over-marinated",
+          "felt like i was eating synthetic beef",
+        ],
+        rating: "5.7/10",
+        image: "beefPics/cruise-2.webp",
+      },
+      {
+        date: "2024-07-31",
+        location: "somewhere in the ocean",
+        cut: "idek",
+        notes: [
+          "flavor was okay",
+          "they marinated this in, like, cornstarch",
+          "didn't feel like i was eating beef",
+        ],
+        rating: "6.1/10",
+        image: "beefPics/cruise-1.webp",
+      },
+      {
+        date: "2024-07-15",
+        location: "Le Relais de l'Entrecôte, Paris",
+        cut: "sirloin",
+        notes: [
+          "sauce is the only redeeming factor",
+          "steak and fries both lacked salt",
+          "not much of a crust at all",
+        ],
+        rating: "dish: 7.4/10, sauce: 8.6/10",
+        image: "beefPics/entrecote.webp",
+      },
+      {
+        date: "2023-11-16",
+        location: "University Center Bistro, UCSC",
+        cut: "dry-aged top sirloin",
+        notes: [
+          "incredible for the school",
+          "lacking salt and a bit tougher due to the cut",
+          "finishing it with olive oil was overkill",
+        ],
+        rating: "7.2/10",
+        image: "beefPics/university-center-bistro.webp",
+      },
+      {
+        date: "2023-07-25",
+        location: "Hell's Kitchen, Las Vegas",
+        cut: "filet mignon",
+        notes: [
+          "only rating the wellington",
+          "perfect cook and seasoned well",
+          "wish the temperature was hotter",
+          "needed acid somewhere to balance the richness of the dish",
+        ],
+        rating: "8.4/10",
+        image: "beefPics/hells-kitchen.webp",
+      },
+      {
+        date: "2023-07-24",
+        location: "Mon Ami Gabi, Las Vegas",
+        cut: "hanger steak",
+        notes: [
+          "presentation needs some work",
+          "wish there were more butter or more salt on the steak",
+          "cook was perfect though",
+        ],
+        rating: "7.4/10",
+        image: "beefPics/mon-ami-gabi.webp",
       },
     ],
     fragrances: [
@@ -511,18 +732,33 @@
     gallery.innerHTML = data.beefGallery
       .map(function (item) {
         var media = item.image
-          ? '<img src="' + safeHref(item.image) + '" alt="' + escapeHtml(item.title) + '" loading="lazy">'
+          ? '<img src="' + safeHref(item.image) + '" alt="' + escapeHtml(item.cut + " at " + item.location) + '" loading="lazy">'
           : '<div class="steak-placeholder" aria-hidden="true"><span>photo pending</span></div>';
+        var notes =
+          '<ul class="steak-notes">' +
+          item.notes
+            .map(function (note) {
+              return "<li>" + escapeHtml(note) + "</li>";
+            })
+            .join("") +
+          "</ul>";
+        var rating = item.rating
+          ? '<p class="steak-rating">' + escapeHtml(item.rating) + "</p>"
+          : "";
         return (
           '<figure class="steak-card" tabindex="0">' +
           media +
           '<figcaption class="steak-overlay">' +
-          '<p class="steak-label">cook notes</p>' +
-          "<h2>" +
-          escapeHtml(item.title) +
-          "</h2><p>" +
-          escapeHtml(item.note) +
-          "</p></figcaption></figure>"
+          '<p class="steak-label">notes</p>' +
+          '<p class="steak-location"><span aria-hidden="true">📍</span> ' +
+          escapeHtml(item.location) +
+          "</p>" +
+          '<p class="steak-cut">cut: ' +
+          escapeHtml(item.cut) +
+          "</p>" +
+          notes +
+          rating +
+          "</figcaption></figure>"
         );
       })
       .join("");

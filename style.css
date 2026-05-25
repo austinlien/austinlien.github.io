@@ -849,14 +849,14 @@ a:focus-visible,
 
 .steak-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 17px;
 }
 
 .steak-card {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface-raised);
@@ -892,7 +892,7 @@ a:focus-visible,
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 23px 21px;
+  padding: 24px 21px;
   background: rgba(16, 21, 18, 0.72);
   color: #f3f1e9;
   opacity: 0;
@@ -900,22 +900,45 @@ a:focus-visible,
 }
 
 .steak-label {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   color: #c1d7bf;
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.steak-overlay h2 {
-  margin-bottom: 11px;
+.steak-location {
+  margin-bottom: 4px;
   color: #f3f1e9;
-  font-size: 1.15rem;
+  font-size: 0.94rem;
+  font-weight: 600;
 }
 
-.steak-overlay > p:last-child {
+.steak-cut {
+  margin-bottom: 17px;
+  color: #c1d7bf;
+  font-size: 0.77rem;
+}
+
+.steak-notes {
+  display: grid;
+  gap: 5px;
+  margin-bottom: 18px;
   color: #d5d9d1;
-  font-size: 0.81rem;
+  font-size: 0.76rem;
+  line-height: 1.48;
+}
+
+.steak-notes li::before {
+  margin-right: 6px;
+  color: #c1d7bf;
+  content: "+";
+}
+
+.steak-rating {
+  color: #f3f1e9;
+  font-size: 0.86rem;
+  font-weight: 600;
 }
 
 .steak-card:hover .steak-overlay,
@@ -989,8 +1012,7 @@ a:focus-visible,
   .currently-grid,
   .recipe-grid,
   .fragrance-grid,
-  .music-grid,
-  .steak-grid {
+  .music-grid {
     grid-template-columns: 1fr;
   }
 
