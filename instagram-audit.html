@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f1e8">
+    <meta
+      name="description"
+      content="A read-only browser utility for reviewing Instagram following relationships locally."
+    >
+    <title>Instagram Following Audit | austin lien</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        var savedTheme = localStorage.getItem("portfolio-theme");
+        if (savedTheme === "dark") {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-layout">
+        <a class="brand" href="index.html" aria-label="austin lien, home">austin lien</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="active" aria-current="page" href="projects.html">Projects</a>
+          <a href="research.html">Research</a>
+          <a href="about.html">About</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.4A9.5 9.5 0 0 1 8.6 3a9.5 9.5 0 1 0 12.4 12.4Z"/></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+        </button>
+      </div>
+    </header>
+    <main class="page-main" id="main-content">
+      <header class="page-hero audit-hero">
+        <div class="container page-heading reveal">
+          <a class="back-link" href="projects.html">&larr; projects</a>
+          <p class="eyebrow">Browser utility</p>
+          <h1>Instagram Following Audit</h1>
+          <p>Review who is not following back through a read-only script that runs locally in your Instagram tab.</p>
+        </div>
+      </header>
+      <section class="page-content audit-content" aria-label="Tool installation">
+        <div class="container audit-layout">
+          <div class="audit-overview reveal">
+            <p class="audit-notice">No password collection. No account actions. No results leave your browser.</p>
+            <h2>Run a scan</h2>
+            <ol class="audit-steps">
+              <li>Open <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">instagram.com</a> on a computer and sign in.</li>
+              <li>Press <strong>F12</strong>, or right-click the page and choose <strong>Inspect</strong>.</li>
+              <li>In the panel that opens, click the <strong>Console</strong> tab.</li>
+              <li>Click <strong>Copy scanner code</strong> below, paste it into the Console, and press <strong>Enter</strong>.</li>
+              <li>When the audit window appears on Instagram, click <strong>Run Scan</strong>.</li>
+            </ol>
+            <p class="audit-tip">If your browser blocks pasting in the Console, follow the on-screen prompt to enable pasting, then paste the code again.</p>
+            <div class="audit-actions">
+              <button class="button button-primary" id="copy-audit-code" type="button" data-goatcounter-click="instagram-audit-copy-code" data-goatcounter-title="Copy scanner code">Copy scanner code</button>
+              <a class="button button-outline" href="tools/instagram-following-audit.js" target="_blank" rel="noreferrer" data-goatcounter-click="instagram-audit-view-source" data-goatcounter-title="View scanner source">View source</a>
+            </div>
+            <p class="audit-feedback" id="copy-audit-feedback" role="status" aria-live="polite"></p>
+          </div>
+          <div class="audit-code-shell">
+            <div class="audit-code-header">
+              <p>instagram-following-audit.js</p>
+              <span>read-only</span>
+            </div>
+            <pre class="audit-code" aria-label="Scanner source preview"><code id="audit-code-preview">Loading source...</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="instagram-audit-page.js"></script>
+    <script data-goatcounter="https://austinlien.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>

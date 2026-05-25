@@ -51,6 +51,19 @@
         demoVideo: "",
         demoPoster: "",
       },
+      {
+        title: "Instagram Following Audit",
+        type: "Browser Utility",
+        status: "Read-only tool",
+        description:
+          "A local browser utility that audits a user's following list, identifies accounts not following back, and exports results without performing account actions.",
+        technologies: ["JavaScript", "Browser APIs", "CSV / JSON", "Privacy-first"],
+        href: "instagram-audit.html",
+        linkLabel: "Open tool",
+        analyticsEvent: "projects-open-instagram-audit",
+        demoVideo: "",
+        demoPoster: "",
+      },
     ],
     research: [
       {
@@ -588,8 +601,15 @@
           '<a class="text-link" href="' +
           safeHref(project.href) +
           '"' +
+          (project.analyticsEvent
+            ? ' data-goatcounter-click="' +
+              escapeHtml(project.analyticsEvent) +
+              '" data-goatcounter-title="Open Instagram Following Audit"'
+            : "") +
           linkTarget(project.href) +
-          ">View repository <span aria-hidden=\"true\">&rarr;</span></a>" +
+          ">" +
+          escapeHtml(project.linkLabel || "View repository") +
+          " <span aria-hidden=\"true\">&rarr;</span></a>" +
           "</article>"
         );
       })
